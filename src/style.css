@@ -214,6 +214,13 @@ form {
   left: -85px;
 }
 
+.open-source {
+  position: relative;
+  left: 415px;
+  top: 15px;
+  color: white;
+}
+
 body {
   background: linear-gradient(to right, rgb(128, 0, 128), rgb(255, 192, 203));
 }

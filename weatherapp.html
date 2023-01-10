@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container border border-4 shadow">
+      <h1 class="current-temp">
+        <span id="temperature">28</span>° <i class="fa-regular fa-sun"></i>
+      </h1>
+      <div class="live-weather"><strong id="weather-name">Sunny</strong></div>
+      <div class="temp-range"><strong>L: 15° H: 30°</strong></div>
+
+      <form id="searchForm">
+        <input
+          style="height: 25px; width: 190px"
+          type="text"
+          class="form-control"
+          placeholder="Search city"
+          autofocus
+          autocomplete="off"
+          id="search-input"
+        />
+        <button type="submit" class="submit-button" id="search-btn">🔍</button>
+        <button type="submit" class="current-button" id="current-btn">
+          Current
+        </button>
+      </form>
+
+      <h2>
+        <i class="fa-solid fa-location-dot" pinpoint></i>
+        <span id="cityName">Melbourne</span>
+      </h2>
+      <strong class="date">Sunday, 4th Dec</strong>
+
+      <br />
+
+      <small class="sunrise"
+        >Sunrise
+        <br />
+        5:52AM</small
+      >
+      <br />
+      <small class="sunset"
+        >Sunset
+        <br />
+        8:35AM</small
+      >
+      <br />
+      <small class="uv-index"
+        >UV Index
+        <br />
+        <small class="uv-number">11</small>
+        <br />
+        Extreme</small
+      >
+      <br />
+      <small class="rain-chance"
+        >Rain
+        <br />
+        <small class="rain-percentage"> 20% </small>
+      </small>
+      <br />
+      <small class="humidity"
+        >Humidity
+        <br />
+        <span class="humidity-number">50</span
+        ><span class="humidity-percentage"> % </span></small
+      >
+
+      <span class="units">
+        <a href="#" id="celsius">°C</a> | <a href="#" id="farenheit">°F</a>
+      </span>
+
+      <small class="forecast"><strong>Weekly Forecast</strong></small>
+
+      <div class="row">
+        <div class="col-1">
+          Mon <br />
+          <i class="fa-solid fa-cloud-sun"></i>
+          <br />
+          <small><strong>26°</strong></small>
+          <br />
+          <small><strong>L: 13° H: 26°</strong></small>
+        </div>
+        <br />
+        <div class="col-1">
+          Tue <br />
+          <i class="fa-regular fa-sun"></i>
+          <br />
+          <small><strong>28°</strong></small>
+          <br />
+          <small><strong>L: 14° H: 28°</strong></small>
+        </div>
+        <br />
+        <div class="col-1">
+          Wed <br />
+          <i class="fa-regular fa-sun"></i>
+          <br />
+          <small><strong>26°</strong></small>
+          <br />
+          <small><strong>L: 12° H: 26°</strong></small>
+        </div>
+        <br />
+        <div class="col-1">
+          Thu <br />
+          <i class="fa-solid fa-cloud-sun"></i>
+          <br />
+          <small><strong>23°</strong></small>
+          <br />
+          <small><strong>L: 10° H: 23°</strong></small>
+        </div>
+        <br />
+        <div class="col-1">
+          Fri <br />
+          <i class="fa-solid fa-cloud-showers-heavy"></i>
+          <br />
+          <small><strong>20°</strong></small>
+          <br />
+          <small><strong>L: 9° H: 20°</strong></small>
+        </div>
+      </div>
+    </div>
+    <a
+      class="open-source"
+      href="https://github.com/schamma94/sarahc-weather-app"
+      target="_blank"
+    >
+      Open Source Code</a
+    >
+    <strong>by Sarah Chamma</strong>
+
+    <script src="src/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/99e1d52262.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

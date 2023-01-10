@@ -1,0 +1,219 @@
+h1 {
+  position: relative;
+  top: -12px;
+  left: 22px;
+  font-size: 45px;
+  font-weight: 700;
+  color: white;
+  display: inline-block;
+  border: 3px white solid;
+  padding: 20px;
+  border-radius: 20px;
+  height: 137px;
+}
+
+h2 {
+  position: relative;
+  top: -139px;
+  right: -264px;
+  color: white;
+  display: inline-block;
+}
+
+h1 .fa-sun:before {
+  font-size: 45px;
+  color: #f4bb19;
+}
+
+.date {
+  position: relative;
+  top: -143px;
+  right: -287px;
+  color: white;
+  display: block;
+}
+
+.live-weather {
+  position: relative;
+  left: -90px;
+  bottom: -18px;
+  color: white;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.temp-range {
+  position: relative;
+  left: -149px;
+  bottom: -41px;
+  color: white;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.fa-cloud-sun:before,
+.fa-sun:before,
+.fa-cloud-showers-heavy:before {
+  font-size: 30px;
+}
+
+.fa-sun:before {
+  color: #f4bb19;
+}
+
+.fa-cloud-sun:before {
+  color: #4483ea;
+}
+
+.fa-cloud-showers-heavy:before {
+  color: #b7b7b7;
+}
+
+.sunrise,
+.sunset,
+.uv-index,
+.rain-chance,
+.humidity {
+  color: white;
+}
+
+.sunrise {
+  position: relative;
+  left: 260px;
+  top: -156px;
+  display: inline-block;
+}
+
+.sunset {
+  position: relative;
+  left: 260px;
+  top: -138px;
+  display: inline-block;
+}
+
+.uv-index {
+  position: relative;
+  top: -223px;
+  left: 345px;
+  display: inline-block;
+  text-align: center;
+}
+.uv-number {
+  position: relative;
+  left: -2px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.rain-chance {
+  position: relative;
+  top: -302px;
+  left: 450px;
+  display: inline-block;
+}
+.rain-percentage {
+  position: relative;
+  left: 3px;
+}
+
+.humidity {
+  position: relative;
+  bottom: 286px;
+  left: 440px;
+  display: inline-block;
+}
+.humidity-number {
+  position: relative;
+  left: 16px;
+}
+.humidity-percentage {
+  position: relative;
+  left: 12px;
+}
+
+.container.border.border-4 {
+  margin-top: 20px;
+  padding: 40px;
+  border-radius: 50px;
+  width: 43%;
+  height: 410px;
+  border-color: white !important;
+}
+
+.row {
+  position: relative;
+  bottom: 170px;
+  color: white;
+}
+
+.units {
+  position: relative;
+  bottom: 310px;
+  left: 21px;
+  color: white;
+  font-weight: bold;
+}
+
+#celsius {
+  color: white;
+  text-decoration: none;
+}
+#celsius:hover {
+  color: lightskyblue;
+}
+
+#farenheit {
+  color: white;
+  text-decoration: none;
+}
+#farenheit:hover {
+  color: lightskyblue;
+}
+
+.forecast {
+  position: relative;
+  bottom: 246px;
+  right: 115px;
+  color: white;
+}
+
+.col-1 {
+  text-align: center;
+  position: relative;
+  bottom: 65px;
+  flex: auto;
+}
+
+.form-control {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  left: -285px;
+  bottom: -95px;
+}
+
+input {
+  display: inline-block;
+}
+
+form {
+  position: relative;
+  bottom: 147px;
+  left: 205px;
+  display: inline-block;
+}
+
+.submit-button {
+  position: relative;
+  bottom: -68px;
+  left: -85px;
+}
+
+.current-button {
+  position: relative;
+  bottom: -68px;
+  left: -85px;
+}
+
+body {
+  background: linear-gradient(to right, rgb(128, 0, 128), rgb(255, 192, 203));
+}

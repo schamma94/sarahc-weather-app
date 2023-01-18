@@ -65,16 +65,16 @@ function updateCelsius(event) {
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", updateCelsius);
 
-function updateFarenheit(event) {
+function updateFahrenheit(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = 82;
 }
 
-let farenheit = document.querySelector("#farenheit");
-farenheit.addEventListener("click", updateFarenheit);
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", updateFahrenheit);
 
-// Weather API - Week 5 HW
+// Weather API
 function searchCity(city) {
   let apiKey = "cb286bad3607984b41ed10c8de5cf00e";
   let units = "metric";
@@ -95,11 +95,11 @@ function showTemperature(response) {
     response.data.weather[0].main;
 }
 
-// Geo Location - Week 5 HW
+// Geo Location
 
 navigator.geolocation.getCurrentPosition(showPosition);
 
-// Current Location - Week 5 HW
+// Current Location
 
 function showPosition(position) {
   let apiKey = "cb286bad3607984b41ed10c8de5cf00e";

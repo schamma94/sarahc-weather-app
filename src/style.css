@@ -28,7 +28,7 @@ h1 .fa-sun:before {
 .date {
   position: relative;
   top: -143px;
-  right: -287px;
+  right: -262px;
   color: white;
   display: block;
 }
@@ -131,15 +131,6 @@ h1 .fa-sun:before {
   left: 12px;
 }
 
-.container.border.border-4 {
-  margin-top: 20px;
-  padding: 40px;
-  border-radius: 50px;
-  width: 43%;
-  height: 410px;
-  border-color: white !important;
-}
-
 .row {
   position: relative;
   bottom: 170px;
@@ -219,6 +210,15 @@ form {
   left: 415px;
   top: 15px;
   color: white;
+}
+
+.container.border.border-4 {
+  margin-top: 20px;
+  padding: 40px;
+  border-radius: 50px;
+  max-width: 610px;
+  height: 410px;
+  border-color: white !important;
 }
 
 body {

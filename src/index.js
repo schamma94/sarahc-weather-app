@@ -96,6 +96,7 @@ function searchCity(city) {
 }
 
 function showTemperature(response) {
+  console.log(response.data);
   let cityName = document.querySelector("#cityName");
   cityName.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
@@ -107,10 +108,12 @@ function showTemperature(response) {
   let iconElement = document.querySelector("icon");
 
   mainTemp.innerHTML = `${temperature}`;
+
   document.querySelector(".humidity-number").innerHTML =
     response.data.main.humidity;
   document.querySelector("#weather-name").innerHTML =
     response.data.weather[0].main;
+
   sunriseElement.innerHTML = response.data.sys.sunrise;
   sunsetElement.innerHTML = response.data.sys.sunset;
   windElement.innerHTML = Math.round(response.data.wind.speed);

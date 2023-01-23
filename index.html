@@ -17,7 +17,13 @@
   <body>
     <div class="container border border-4 shadow">
       <h1 class="current-temp">
-        <span id="temperature">28</span>° <i class="fa-regular fa-sun"></i>
+        <span id="temperature">28</span>°
+        <img
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+          alt="Clear"
+          id="icon"
+          class="float-left"
+        />
       </h1>
       <div class="live-weather"><strong id="weather-name">Sunny</strong></div>
       <div class="temp-range"><strong>L: 15° H: 30°</strong></div>
@@ -65,6 +71,7 @@
         <br />
         Extreme</small
       >
+      <small id="wind">Wind</small> km/h
       <br />
       <small class="rain-chance"
         >Rain

@@ -88,11 +88,23 @@ function showTemperature(response) {
   cityName.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let mainTemp = document.querySelector("#temperature");
+  let windElement = document.querySelector("#wind");
+  let sunriseElement = document.querySelector("sunrise");
+  let sunsetElement = document.querySelector("sunset");
+  let iconElement = document.querySelector("icon");
+
   mainTemp.innerHTML = `${temperature}`;
   document.querySelector(".humidity-number").innerHTML =
     response.data.main.humidity;
   document.querySelector("#weather-name").innerHTML =
     response.data.weather[0].main;
+  sunriseElement.innerHTML = response.data.sys.sunrise;
+  sunsetElement.innerHTML = response.data.sys.sunset;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `https://api.met.no/weatherapi/weathericon/2.0/data`
+  );
 }
 
 // Geo Location

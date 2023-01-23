@@ -9,6 +9,18 @@ let hours = now.getHours();
 let minutes = ("0" + now.getMinutes()).slice(-2);
 let month = now.getMonth();
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = timestamp.getHours();
+  let minutes = date.getMinutes();
+  if (hours < 10) {
+    hours = `0${minutes}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+}
+
 let days = [
   "Sunday",
   "Monday",
@@ -88,9 +100,10 @@ function showTemperature(response) {
   cityName.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let mainTemp = document.querySelector("#temperature");
-  let windElement = document.querySelector("#wind");
+  let windElement = document.querySelector("wind");
   let sunriseElement = document.querySelector("sunrise");
   let sunsetElement = document.querySelector("sunset");
+  let dateElement = document.querySelector("date");
   let iconElement = document.querySelector("icon");
 
   mainTemp.innerHTML = `${temperature}`;
@@ -101,6 +114,7 @@ function showTemperature(response) {
   sunriseElement.innerHTML = response.data.sys.sunrise;
   sunsetElement.innerHTML = response.data.sys.sunset;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
     `https://api.met.no/weatherapi/weathericon/2.0/data`

@@ -87,7 +87,7 @@ h1 .fa-sun:before {
 #sunrise-time {
   position: relative;
   left: 260px;
-  top: -132px;
+  top: -150px;
   display: inline-block;
 }
 
@@ -95,13 +95,13 @@ h1 .fa-sun:before {
 #sunset-time {
   position: relative;
   left: 260px;
-  top: -100px;
+  top: -125px;
   display: inline-block;
 }
 
 .uv-index {
   position: relative;
-  top: -216px;
+  top: -243px;
   left: 345px;
   display: inline-block;
   text-align: center;
@@ -115,7 +115,7 @@ h1 .fa-sun:before {
 
 .rain-chance {
   position: relative;
-  top: -328px;
+  top: -353px;
   left: 450px;
   display: inline-block;
 }
@@ -126,7 +126,7 @@ h1 .fa-sun:before {
 
 .humidity {
   position: relative;
-  bottom: 294px;
+  bottom: 322px;
   left: 436px;
   display: inline-block;
 }
@@ -141,7 +141,7 @@ h1 .fa-sun:before {
 
 .wind {
   position: relative;
-  bottom: 207px;
+  bottom: 235px;
   left: 355px;
 }
 

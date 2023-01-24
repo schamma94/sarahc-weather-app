@@ -79,7 +79,8 @@ h1 .fa-sun:before {
 .forecast,
 .units,
 .row,
-.wind {
+.wind,
+#wind-speed {
   color: white;
 }
 
@@ -139,7 +140,8 @@ h1 .fa-sun:before {
   left: 12px;
 }
 
-.wind {
+.wind,
+#wind-speed {
   position: relative;
   bottom: 235px;
   left: 355px;

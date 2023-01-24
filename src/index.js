@@ -21,6 +21,8 @@ function formatDate(timestamp) {
   }
 }
 
+// THIS DIDNT WORK ^^^^ TIME NOT CHANGING FOR EACH CITY
+
 let days = [
   "Sunday",
   "Monday",
@@ -102,11 +104,11 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let mainTemp = document.querySelector("#temperature");
 
-  let dateElement = document.querySelector("date");
+  // let dateElement = document.querySelector("date");
 
-  let windElement = document.querySelector("wind");
-  let sunriseElement = document.querySelector("#sunrise-time");
-  let sunsetElement = document.querySelector("#sunset-time");
+  // let windElement = document.querySelector("#wind-speed");
+  // let sunriseElement = document.querySelector("#sunrise-time");
+  // let sunsetElement = document.querySelector("#sunset-time");
   let iconElement = document.querySelector("#icon");
 
   mainTemp.innerHTML = `${temperature}`;
@@ -116,10 +118,14 @@ function showTemperature(response) {
   document.querySelector("#weather-name").innerHTML =
     response.data.weather[0].main;
 
-  sunriseElement.innerHTML = response.data.sys.sunrise;
-  sunsetElement.innerHTML = response.data.sys.sunset;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector("#wind-speed").innerHTML = response.data.wind.speed;
+  document.querySelector("#sunrise-time").innerHTML = response.data.sys.sunrise;
+  document.querySelector("#sunset-time").innerHTML = response.data.sys.sunset;
+
+  // sunriseElement.innerHTML = response.data.sys.sunrise;
+  // sunsetElement.innerHTML = response.data.sys.sunset;
+  // windElement.innerHTML = Math.round(response.data.wind.speed);
+  // dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

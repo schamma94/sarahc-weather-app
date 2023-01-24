@@ -96,16 +96,15 @@ function searchCity(city) {
 }
 
 function showTemperature(response) {
-  console.log(response.data);
   let cityName = document.querySelector("#cityName");
   cityName.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let mainTemp = document.querySelector("#temperature");
   let windElement = document.querySelector("wind");
-  let sunriseElement = document.querySelector("sunrise");
-  let sunsetElement = document.querySelector("sunset");
+  let sunriseElement = document.querySelector("#sunrise");
+  let sunsetElement = document.querySelector("#sunset");
   let dateElement = document.querySelector("date");
-  let iconElement = document.querySelector("icon");
+  let iconElement = document.querySelector("#icon");
 
   mainTemp.innerHTML = `${temperature}`;
 
@@ -120,7 +119,7 @@ function showTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `https://api.met.no/weatherapi/weathericon/2.0/data`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 

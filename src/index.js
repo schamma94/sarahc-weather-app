@@ -98,12 +98,15 @@ function searchCity(city) {
 function showTemperature(response) {
   let cityName = document.querySelector("#cityName");
   cityName.innerHTML = response.data.name;
+
   let temperature = Math.round(response.data.main.temp);
   let mainTemp = document.querySelector("#temperature");
+
+  let dateElement = document.querySelector("date");
+
   let windElement = document.querySelector("wind");
   let sunriseElement = document.querySelector("#sunrise-time");
   let sunsetElement = document.querySelector("#sunset-time");
-  let dateElement = document.querySelector("date");
   let iconElement = document.querySelector("#icon");
 
   mainTemp.innerHTML = `${temperature}`;

@@ -69,8 +69,10 @@ h1 .fa-sun:before {
   color: #b7b7b7;
 }
 
-#sunrise,
-#sunset,
+.sunrise,
+.sunset,
+#sunrise-time,
+#sunset-time,
 .uv-index,
 .rain-chance,
 .humidity,
@@ -81,14 +83,16 @@ h1 .fa-sun:before {
   color: white;
 }
 
-#sunrise {
+.sunrise,
+#sunrise-time {
   position: relative;
   left: 260px;
   top: -132px;
   display: inline-block;
 }
 
-#sunset {
+.sunset,
+#sunset-time {
   position: relative;
   left: 260px;
   top: -100px;

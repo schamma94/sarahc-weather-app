@@ -101,8 +101,8 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let mainTemp = document.querySelector("#temperature");
   let windElement = document.querySelector("wind");
-  let sunriseElement = document.querySelector("#sunrise");
-  let sunsetElement = document.querySelector("#sunset");
+  let sunriseElement = document.querySelector("#sunrise-time");
+  let sunsetElement = document.querySelector("#sunset-time");
   let dateElement = document.querySelector("date");
   let iconElement = document.querySelector("#icon");
 

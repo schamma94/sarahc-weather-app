@@ -42,6 +42,12 @@ h1 .fa-sun:before {
   font-size: 13px;
 }
 
+#icon {
+  position: relative;
+  left: -8px;
+  bottom: 6px;
+}
+
 .temp-range {
   position: relative;
   left: -149px;
@@ -140,11 +146,15 @@ h1 .fa-sun:before {
   left: 12px;
 }
 
-.wind,
-#wind-speed {
+.wind {
   position: relative;
   bottom: 235px;
   left: 355px;
+}
+#wind-speed {
+  position: relative;
+  bottom: 1px;
+  left: -1px;
 }
 
 .row {

@@ -118,7 +118,9 @@ function showTemperature(response) {
   document.querySelector("#weather-name").innerHTML =
     response.data.weather[0].main;
 
-  document.querySelector("#wind-speed").innerHTML = response.data.wind.speed;
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector("#sunrise-time").innerHTML = response.data.sys.sunrise;
   document.querySelector("#sunset-time").innerHTML = response.data.sys.sunset;
 

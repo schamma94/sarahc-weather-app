@@ -1,59 +1,48 @@
 // Part 1
 
-let now = new Date();
+function displayDate(timestamp) {
+  let now = new Date(timestamp);
 
-let currentDate = document.querySelector(".date");
+  let date = now.getDate();
+  let hours = now.getHours();
+  let minutes = ("0" + now.getMinutes()).slice(-2);
+  let month = now.getMonth();
 
-let date = now.getDate();
-let hours = now.getHours();
-let minutes = ("0" + now.getMinutes()).slice(-2);
-let month = now.getMonth();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
 
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = timestamp.getHours();
-  let minutes = date.getMinutes();
-  if (hours < 10) {
-    hours = `0${minutes}`;
-  }
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  let currentMonth = months[now.getMonth()];
+  let dateString = `${day}, ${date} ${currentMonth}, ${now.toLocaleString(
+    "en-US",
+    { hour: "numeric", minute: "numeric", hour12: true }
+  )}`;
+
+  return dateString;
 }
-
-// THIS DIDNT WORK ^^^^ TIME NOT CHANGING FOR EACH CITY
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-
-let months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let currentMonth = months[now.getMonth()];
-
-currentDate.innerHTML = `${day}, ${date} ${currentMonth}, ${now.toLocaleString(
-  "en-US",
-  { hour: "numeric", minute: "numeric", hour12: true }
-)}`;
+displayDate(new Date());
 
 // Part 2
 
@@ -102,13 +91,12 @@ function showTemperature(response) {
   cityName.innerHTML = response.data.name;
 
   let temperature = Math.round(response.data.main.temp);
+  celsiusTemperature = temperature;
   let mainTemp = document.querySelector("#temperature");
 
-  // let dateElement = document.querySelector("date");
+  let currentDate = document.querySelector(".date");
+  currentDate.innerHTML = displayDate(new Date());
 
-  // let windElement = document.querySelector("#wind-speed");
-  // let sunriseElement = document.querySelector("#sunrise-time");
-  // let sunsetElement = document.querySelector("#sunset-time");
   let iconElement = document.querySelector("#icon");
 
   mainTemp.innerHTML = `${temperature}`;
@@ -121,13 +109,13 @@ function showTemperature(response) {
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#sunrise-time").innerHTML = response.data.sys.sunrise;
-  document.querySelector("#sunset-time").innerHTML = response.data.sys.sunset;
+  document.querySelector("#sunrise-time").innerHTML = displayDate(
+    response.data.sys.sunrise
+  );
+  document.querySelector("#sunset-time").innerHTML = displayDate(
+    response.data.sys.sunset
+  );
 
-  // sunriseElement.innerHTML = response.data.sys.sunrise;
-  // sunsetElement.innerHTML = response.data.sys.sunset;
-  // windElement.innerHTML = Math.round(response.data.wind.speed);
-  // dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

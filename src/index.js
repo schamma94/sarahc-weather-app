@@ -155,3 +155,5 @@ function getCurrentLocation(event) {
 
 let button = document.querySelector("#current-btn");
 button.addEventListener("click", getCurrentLocation);
+
+// Celcius & Farenheit

@@ -109,16 +109,22 @@ function showTemperature(response) {
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#sunrise-time").innerHTML = displayDate(
-    response.data.sys.sunrise
-  );
-  document.querySelector("#sunset-time").innerHTML = displayDate(
-    response.data.sys.sunset
-  );
 
   iconElement.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+}
+
+function displaySunriseSunset() {
+  let date = now.getDate();
+  let hours = now.getHours();
+  let minutes = ("0" + now.getMinutes()).slice(-2);
+  document.querySelector("#sunrise-time").innerHTML = displaySunriseSunset(
+    response.data.sys.sunrise
+  );
+  document.querySelector("#sunset-time").innerHTML = displaySunriseSunset(
+    response.data.sys.sunset
   );
 }
 

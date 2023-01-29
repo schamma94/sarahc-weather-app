@@ -4,9 +4,9 @@ function displayDate(timestamp) {
   let now = new Date(timestamp);
 
   let date = now.getDate();
-  let hours = now.getHours();
-  let minutes = ("0" + now.getMinutes()).slice(-2);
-  let month = now.getMonth();
+  // let hours = now.getHours();
+  // let minutes = ("0" + now.getMinutes()).slice(-2);
+  // let month = now.getMonth();
 
   let days = [
     "Sunday",
@@ -86,6 +86,19 @@ function searchCity(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function showTemperature(response) {
   let cityName = document.querySelector("#cityName");
   cityName.innerHTML = response.data.name;
@@ -110,8 +123,12 @@ function showTemperature(response) {
     response.data.wind.speed
   );
 
-  document.querySelector("#sunrise-time").innerHTML = response.data.sys.sunrise;
-  document.querySelector("#sunset-time").innerHTML = response.data.sys.sunset;
+  document.querySelector("#sunrise-time").innerHTML = formatTime(
+    response.data.sys.sunrise * 1000
+  );
+  document.querySelector("#sunset-time").innerHTML = formatTime(
+    response.data.sys.sunset * 1000
+  );
 
   iconElement.setAttribute(
     "src",

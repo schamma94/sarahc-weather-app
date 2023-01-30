@@ -99,6 +99,44 @@ function formatTime(timestamp) {
   return `${hours}:${minutes}`;
 }
 
+// Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#main-forecast");
+
+  let forecastHTML = `
+  <div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-1">
+            ${day}<br />
+            <img
+              src="https://openweathermap.org/img/wn/01d@2x.png"
+              alt=""
+              width="42"
+            />
+            <br />
+            <span><strong>26°</strong></span>
+            <br />
+            <small
+              ><strong
+                >L: <span class="min-temp">13</span>° H:
+                <span class="max-temp"> 26</span>°</strong
+              ></small
+            >
+          </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+// Displaying Temperature
+
 function showTemperature(response) {
   let cityName = document.querySelector("#cityName");
   cityName.innerHTML = response.data.name;

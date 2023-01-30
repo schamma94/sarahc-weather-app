@@ -15,7 +15,152 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container border border-4 shadow">
+
+<div class="container border border-4 shadow">
+  <div class="row">
+    <div class="col-6">
+      <div>
+        <div class="d-flex">
+          28°
+          <img
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+          alt="Clear"
+          id="icon"
+          class="float-left"
+        />
+        </div>
+        Sunny
+        L: 15° H: 30°
+      </div>
+      <div class="d-flex justify-content-center">
+       °C | °F
+      </div>
+    </div>
+
+    <div class="col-6">
+      <form id="searchForm">
+        <div class="d-flex">
+        <input
+          style="height: 25px; width: 190px"
+          type="text"
+          class="form-control"
+          placeholder="Search city"
+          autofocus
+          autocomplete="off"
+          id="search-input"
+        />
+        <button type="submit" class="submit-button" id="search-btn">🔍</button>
+        <button type="submit" class="current-button" id="current-btn">
+          Current
+        </button>
+
+        </div>
+      </form>
+      <div class="d-flex">
+
+      <i class="fa-solid fa-location-dot" pinpoint></i>
+      <span id="cityName">Melbourne</span>
+     
+      </div>
+      Sunday, 4th Dec
+      <div class="d-flex w-100 justify-content-between">
+        <div>
+          <p>Sunrise</p>
+          5:52AM
+        </div>
+        <div>
+          <p>UV Index</p>
+          11
+        </div>
+        <div>
+          <p>Rain</p>
+          20%
+        </div>
+      </div>
+      <div class="d-flex w-100 justify-content-between">
+        <div>
+          <p>Sunset</p>
+          8:35AM
+        </div>
+        <div>
+          <p>Wind</p>
+          5km/h
+        </div>
+        <div>
+          <p>Humidity</p>
+          50%
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>Weekly Forecast</p>
+  <div class="row" id="forecast">
+    <div class="col">
+     Monday
+   <img
+              src="https://openweathermap.org/img/wn/01d@2x.png"
+              alt=""
+              width="42"
+            />
+      26°
+      L: 13° H: 26°
+    </div>
+    <div class="col">
+      Tuesday
+     <img
+              src="https://openweathermap.org/img/wn/01d@2x.png"
+              alt=""
+              width="42"
+            />
+     28°
+      L: 14° H: 28°
+    </div>
+    <div class="col">
+      Wednesday
+    <img
+              src="https://openweathermap.org/img/wn/01d@2x.png"
+              alt=""
+              width="42"
+            />
+      26°
+      L: 12° H: 26°
+    </div>
+    <div class="col">
+    Thursday
+      <img
+              src="https://openweathermap.org/img/wn/02d@2x.png"
+              alt=""
+              width="42"
+            />
+      23°
+      L: 10° H: 23°
+    </div>
+    <div class="col">
+    Fri
+    <img
+    src="https://openweathermap.org/img/wn/10n@2x.png"
+     alt=""
+    width="42"
+    />
+     20°
+     L: 9° H: 20°
+    </div>
+  </div>
+</div>
+
+<div class="open-source">
+      <a href="https://github.com/schamma94/sarahc-weather-app" target="_blank">
+        Open Source Code</a
+      >
+      <strong>by Sarah Chamma</strong>
+    </div>
+  </body>
+  </html>
+
+
+
+
+   <!--  <div class="container border border-4 shadow">
       <h1 class="current-temp">
         <span id="temperature">28</span>°
         <img
@@ -94,7 +239,7 @@
 
       <small class="forecast"><strong>Weekly Forecast</strong></small>
 
-      <div class="weather-forecast">
+      <div class="weather-forecast" id="main-forecast">
         <div class="row">
           <div class="col-1">
             Mon <br />

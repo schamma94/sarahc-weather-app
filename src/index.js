@@ -122,7 +122,7 @@ function displayForecast(response) {
           <div class="col-1">
             ${formatDay(forecastDay.dt)}<br />
             <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+              src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
                 response.data.condition.icon
               }.png" 
       alt="" width="42"
@@ -189,7 +189,7 @@ function showTemperature(response) {
 
   iconElement.setAttribute(
     "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    `https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 
   getForecast(response.data.coord);

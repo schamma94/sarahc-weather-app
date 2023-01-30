@@ -202,9 +202,8 @@ navigator.geolocation.getCurrentPosition(showPosition);
 // Current Location
 
 function showPosition(position) {
-  let apiKey = "cb286bad3607984b41ed10c8de5cf00e";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
+  let apiKey = "cb286bad3607984b41ed10c8de5cf00e"; // to update
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemperature);
 }

@@ -79,9 +79,8 @@ fahrenheit.addEventListener("click", updateFahrenheit);
 
 // Weather API
 function searchCity(city) {
-  let apiKey = "cb286bad3607984b41ed10c8de5cf00e";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  let apiKey = "cb286bad3607984b41ed10c8de5cf00e"; // to update
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemperature);
 }
@@ -123,12 +122,10 @@ function displayForecast(response) {
           <div class="col-1">
             ${formatDay(forecastDay.dt)}<br />
             <img
-              src="https://openweathermap.org/img/wn/${
-                forecast.weather[0].icon
-              }@2x.png"
-              alt=""
-              width="42"
-            />
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                response.data.condition.icon
+              }.png" 
+      alt="" width="42"
             <br />
             <span><strong>26°</strong></span>
             <br />
@@ -153,8 +150,8 @@ function displayForecast(response) {
 // Displaying Temperature
 
 function getForecast(coordinates) {
-  let apiKey = "cb286bad3607984b41ed10c8de5cf00e";
-  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiKey = "cb286bad3607984b41ed10c8de5cf00e"; // to update
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayForecast);
 }
@@ -176,8 +173,8 @@ function showTemperature(response) {
 
   document.querySelector(".humidity-number").innerHTML =
     response.data.main.humidity;
-  document.querySelector("#weather-name").innerHTML =
-    response.data.weather[0].main;
+  document.querySelector("#weather-desc").innerHTML =
+    response.data.condition.description;
 
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
@@ -192,7 +189,7 @@ function showTemperature(response) {
 
   iconElement.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 
   getForecast(response.data.coord);

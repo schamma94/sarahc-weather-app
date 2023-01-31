@@ -14,9 +14,6 @@ h1 {
 }
 
 h2 {
-  position: relative;
-  top: -139px;
-  right: -264px;
   color: white;
   display: inline-block;
 }
@@ -27,32 +24,17 @@ h1 .fa-sun:before {
 }
 
 .date {
-  position: relative;
-  top: -143px;
-  right: -262px;
   color: white;
   display: block;
 }
 
 .live-weather {
-  position: relative;
-  left: -90px;
-  bottom: -18px;
   color: white;
   display: inline-block;
   font-size: 13px;
 }
 
-#icon {
-  position: relative;
-  left: -8px;
-  bottom: 6px;
-}
-
 .temp-range {
-  position: relative;
-  left: -149px;
-  bottom: -41px;
   color: white;
   display: inline-block;
   font-size: 13px;
@@ -93,80 +75,32 @@ h1 .fa-sun:before {
 
 .sunrise,
 #sunrise-time {
-  position: relative;
-  left: 260px;
-  top: -150px;
   display: inline-block;
 }
 
 .sunset,
 #sunset-time {
-  position: relative;
-  left: 260px;
-  top: -125px;
   display: inline-block;
 }
 
 .uv-index {
-  position: relative;
-  top: -243px;
-  left: 345px;
   display: inline-block;
   text-align: center;
 }
 .uv-number {
-  position: relative;
-  left: -2px;
   font-weight: bold;
   display: inline-block;
 }
 
 .rain-chance {
-  position: relative;
-  top: -353px;
-  left: 450px;
   display: inline-block;
-}
-.rain-percentage {
-  position: relative;
-  left: 3px;
 }
 
 .humidity {
-  position: relative;
-  bottom: 322px;
-  left: 436px;
   display: inline-block;
-}
-.humidity-number {
-  position: relative;
-  left: 16px;
-}
-.humidity-percentage {
-  position: relative;
-  left: 12px;
-}
-
-.wind {
-  position: relative;
-  bottom: 235px;
-  left: 355px;
-}
-#wind-speed {
-  position: relative;
-  bottom: 1px;
-  left: -1px;
-}
-
-.row {
-  position: relative;
-  bottom: 215px;
 }
 
 .units {
-  position: relative;
-  bottom: 364px;
-  left: 36px;
   font-weight: bold;
 }
 
@@ -186,22 +120,13 @@ h1 .fa-sun:before {
   color: lightskyblue;
 }
 
-.forecast {
-  position: relative;
-  bottom: 287px;
-  right: 133px;
-}
-
 .col-1 {
   text-align: center;
-  position: relative;
-  bottom: 65px;
   flex: auto;
 }
 
 .form-control {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
   left: -285px;
   bottom: -95px;
 }
@@ -211,28 +136,10 @@ input {
 }
 
 form {
-  position: relative;
-  bottom: 147px;
-  left: 205px;
   display: inline-block;
 }
 
-.submit-button {
-  position: relative;
-  bottom: -68px;
-  left: -85px;
-}
-
-.current-button {
-  position: relative;
-  bottom: -68px;
-  left: -85px;
-}
-
 .open-source {
-  position: relative;
-  left: 415px;
-  top: 15px;
   color: white;
 }
 

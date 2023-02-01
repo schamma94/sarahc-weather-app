@@ -180,12 +180,12 @@ function showTemperature(response) {
     response.data.wind.speed
   );
 
-  document.querySelector("#sunrise-time").innerHTML = formatTime(
-    response.data.sys.sunrise * 1000
-  );
-  document.querySelector("#sunset-time").innerHTML = formatTime(
-    response.data.sys.sunset * 1000
-  );
+  // document.querySelector("#sunrise-time").innerHTML = formatTime(
+  //   response.data.sys.sunrise * 1000
+  // );
+  // document.querySelector("#sunset-time").innerHTML = formatTime(
+  //    response.data.sys.sunset * 1000
+  //  );
 
   iconElement.setAttribute(
     "src",

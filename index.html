@@ -18,9 +18,11 @@
     <div class="container border border-4 shadow">
       <div class="row">
         <div class="col-6">
-          <div>
+          <div class="current-temp">
             <div class="d-flex">
+              <h1>
               <span id="temperature">28</span>°
+              </h1>
               <img
                 src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                 alt="Clear"
@@ -58,11 +60,11 @@
           </form>
 
           <div class="d-flex">
-            <i class="fa-solid fa-location-dot" pinpoint></i>
+            <i class="fa-solid fa-location-dot"></i>
             <span id="cityName">Melbourne</span>
           </div>
-          <div class="date">Sunday, 4th Dec</div>
-          <div class="d-flex w-100 justify-content-between">
+          <div class="date mb-4">Sunday, 4th Dec</div>
+          <div class="d-flex w-100 justify-content-between mb-3">
             <div>
               <p>Sunrise</p>
               <span id="sunrise-time">5:52AM</span>
@@ -92,7 +94,7 @@
           </div>
         </div>
       </div>
-      <p>Weekly Forecast</p>
+      <p class="color-white">Weekly Forecast</p>
       <div class="row" id="forecast"></div>
     </div>
 
@@ -102,6 +104,8 @@
       >
       <strong>by Sarah Chamma</strong>
     </div>
+    <script src="src/index.js"></script>
+    <script src="https://kit.fontawesome.com/99e1d52262.js" crossorigin="anonymous"></script>
   </body>
 </html>
 

@@ -158,7 +158,7 @@ function getForecast(coordinates) {
 
 function showTemperature(response) {
   let cityName = document.querySelector("#cityName");
-  cityName.innerHTML = response.data.name;
+  cityName.innerHTML = response.data.city;
 
   let temperature = Math.round(response.data.temperature.current);
   celsiusTemperature = temperature;

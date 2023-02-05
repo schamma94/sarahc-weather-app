@@ -15,11 +15,6 @@ h2 {
   display: inline-block;
 }
 
-h1 .fa-sun:before {
-  font-size: 45px;
-  color: #f4bb19;
-}
-
 .date {
   color: white;
   display: block;
@@ -38,22 +33,8 @@ h1 .fa-sun:before {
   font-size: 13px;
 }
 
-.fa-cloud-sun:before,
-.fa-sun:before,
-.fa-cloud-showers-heavy:before {
-  font-size: 30px;
-}
-
-.fa-sun:before {
-  color: #f4bb19;
-}
-
-.fa-cloud-sun:before {
-  color: #4483ea;
-}
-
-.fa-cloud-showers-heavy:before {
-  color: #b7b7b7;
+.weather-desc {
+  text-transform: capitalize;
 }
 
 .uv-index,
@@ -125,6 +106,8 @@ form {
 
 .open-source {
   color: white;
+  text-align: center;
+  padding: 15px;
 }
 
 .container.border.border-4 {
@@ -132,7 +115,7 @@ form {
   padding: 40px;
   border-radius: 50px;
   max-width: 640px;
-  height: 410px;
+  height: 470px;
   border-color: white !important;
 }
 

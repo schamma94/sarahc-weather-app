@@ -127,13 +127,13 @@ function displayForecast(response) {
               }.png" 
       alt="" width="42"
             <br />
-            <span><strong>26°</strong></span>
+            <span><strong></strong></span>
             <br />
             <small
               ><strong
                 >L: <span class="min-temp">${Math.round(
                   forecastDay.temperature.minimum
-                )}°/span> H:
+                )}°</span> H:
                 <span class="max-temp">${Math.round(
                   forecastDay.temperature.maximum
                 )}°</span></strong

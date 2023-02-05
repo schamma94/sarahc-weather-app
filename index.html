@@ -17,24 +17,19 @@
   <body>
     <div class="container border border-4 shadow">
       <div class="row">
-        <div class="col-6">
+        <div class="col-5">
           <div class="current-temp">
             <div class="d-flex">
-              <h1>
-              <span id="temperature">28</span>°
-              </h1>
+              <h1><span id="temperature"></span>°</h1>
               <img
-                src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist-day.png"
-                alt="sun"
                 id="icon"
                 class="float-left"
               />
             </div>
-            <span class="weather-desc" id="weather-desc"> Sunny </span>
-            <div>L: 15° H: 30°</div>
+            <span class="weather-desc" id="weather-desc"></span>
           </div>
           <div class="d-flex justify-content-center">
-            <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a>
+            <div style="margin-right: 5px"><a href="#" id="celsius">°C</a></div> | <div style="margin-left"><a href="#" id="fahrenheit">°F</a></div>
           </div>
         </div>
 
@@ -63,20 +58,10 @@
             <i class="fa-solid fa-location-dot"></i>
             <span id="cityName">Melbourne</span>
           </div>
-          <div class="date mb-4">Sunday, 4th Dec</div>
+     <em class="last-updated">Last updated:</em> <span class="date mb-4"></span>
           <div class="d-flex w-100 justify-content-between mb-3">
-        
-            <div>
-              <p>UV Index</p>
-              11
-            </div>
-            <div>
-              <p>Rain</p>
-              20%
-            </div>
           </div>
           <div class="d-flex w-100 justify-content-between">
-           
             <div>
               <p>Wind</p>
               <span id="wind-speed">5</span>km/h
@@ -99,9 +84,13 @@
       <strong>by Sarah Chamma</strong>
     </div>
     <script src="src/index.js"></script>
-    <script src="https://kit.fontawesome.com/99e1d52262.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/99e1d52262.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
+
 
  <!--  <div class="container border border-4 shadow">
       <h1 class="current-temp">

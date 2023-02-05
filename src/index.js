@@ -98,6 +98,8 @@ function formatTime(timestamp) {
   return `${hours}:${minutes}`;
 }
 
+searchCity("Melbourne");
+
 // Forecast
 
 function formatDay(timestamp) {

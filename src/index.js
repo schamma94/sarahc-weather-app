@@ -182,6 +182,7 @@ function showTemperature(response) {
     response.data.wind.speed
   );
 
+  // NOT AVAILABLE IN THIS API
   // document.querySelector("#sunrise-time").innerHTML = formatTime(
   //   response.data.sys.sunrise * 1000
   // );

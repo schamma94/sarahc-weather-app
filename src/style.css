@@ -137,6 +137,14 @@ form {
   padding: 15px;
 }
 
+.pusheen-gif {
+  width: 100%;
+  margin-left: 1070px;
+  margin-top: -200px;
+  margin-bottom: 65px;
+  position: fixed;
+}
+
 .container.border.border-4 {
   margin-top: 20px;
   padding: 40px;

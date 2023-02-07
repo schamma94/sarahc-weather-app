@@ -3,6 +3,8 @@ h1 {
   font-weight: 700;
   color: white;
   display: inline-block;
+  margin-left: 25px;
+  margin-top: 10px;
 }
 #cityName {
   font-size: 25px;
@@ -13,6 +15,10 @@ h1 {
 h2 {
   color: white;
   display: inline-block;
+}
+
+#icon {
+  margin-top: -15px;
 }
 
 .date {
@@ -27,6 +33,10 @@ h2 {
   font-size: 13px;
 }
 
+.fa-location-dot {
+  font-size: 30px;
+}
+
 .temp-range {
   color: white;
   display: inline-block;
@@ -37,8 +47,6 @@ h2 {
   text-transform: capitalize;
 }
 
-.uv-index,
-.rain-chance,
 .humidity,
 .forecast,
 .units,
@@ -48,17 +56,9 @@ h2 {
   color: white;
 }
 
-.uv-index {
-  display: inline-block;
-  text-align: center;
-}
-.uv-number {
-  font-weight: bold;
-  display: inline-block;
-}
-
-.rain-chance {
-  display: inline-block;
+.wind-section {
+  margin-right: 70px;
+  margin-left: 45px;
 }
 
 .humidity {
@@ -69,20 +69,39 @@ h2 {
   font-weight: bold;
 }
 
-#celsius {
+.d-flex {
+  margin-top: 10px;
+}
+
+.celsius {
   color: white;
   text-decoration: none;
 }
-#celsius:hover {
+.celsius:hover {
   color: lightskyblue;
 }
 
-#fahrenheit {
+.fahrenheit {
   color: white;
   text-decoration: none;
+  margin-left: 3px;
 }
-#fahrenheit:hover {
+.fahrenheit:hover {
   color: lightskyblue;
+}
+.active {
+  color: greenyellow;
+}
+
+.submit-button {
+  margin-left: 15px;
+  margin-top: -17px;
+  margin-bottom: 13px;
+}
+.current-button {
+  margin-left: 10px;
+  margin-top: -17px;
+  margin-bottom: 12px;
 }
 
 .col-1 {
@@ -94,6 +113,7 @@ h2 {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   left: -285px;
   bottom: -95px;
+  margin-top: -15px;
 }
 
 input {

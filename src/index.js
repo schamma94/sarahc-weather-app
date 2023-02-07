@@ -65,7 +65,7 @@ function updateCelsius(event) {
   temperature.innerHTML = 28;
 }
 
-let celsius = document.querySelector("#celsius");
+let celsius = document.querySelector(".celsius");
 celsius.addEventListener("click", updateCelsius);
 
 function updateFahrenheit(event) {
@@ -74,7 +74,7 @@ function updateFahrenheit(event) {
   temperature.innerHTML = 82;
 }
 
-let fahrenheit = document.querySelector("#fahrenheit");
+let fahrenheit = document.querySelector(".fahrenheit");
 fahrenheit.addEventListener("click", updateFahrenheit);
 
 // Weather API
@@ -205,7 +205,7 @@ navigator.geolocation.getCurrentPosition(showPosition);
 
 function showPosition(position) {
   let apiKey = "fbef01f4et1b02o0d25c27210a43ef3f";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${position.coords.latitude}&lon=${position.coords.longitude}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemperature);
 }
@@ -240,8 +240,8 @@ function displayCelsiusTemp(event) {
 
 let celsiusTemperature = null;
 
-let fahrenheitLink = document.querySelector("#fahrenheit");
+let fahrenheitLink = document.querySelector(".fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
-let celsiusLink = document.querySelector("#celsius");
+let celsiusLink = document.querySelector(".celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);

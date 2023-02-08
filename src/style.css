@@ -91,7 +91,6 @@ h2 {
 .fahrenheit {
   color: white;
   text-decoration: none;
-  margin-left: 3px;
 }
 .fahrenheit:hover {
   color: lightskyblue;

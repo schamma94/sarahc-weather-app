@@ -164,6 +164,9 @@ function showTemperature(response) {
 
   let temperature = Math.round(response.data.temperature.current);
   celsiusTemperature = temperature;
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+
   let mainTemp = document.querySelector("#temperature");
 
   let currentDate = document.querySelector(".date");

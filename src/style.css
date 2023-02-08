@@ -1,16 +1,16 @@
 h1 {
-  font-size: 45px;
-  font-weight: 700;
   color: white;
   display: inline-block;
+  font-size: 45px;
+  font-weight: 700;
   margin-left: 25px;
   margin-top: 10px;
 }
 #cityName {
   font-size: 30px;
   font-weight: bolder;
-  margin-left: 10px;
   margin-bottom: 5px;
+  margin-left: 10px;
   margin-top: -8px;
 }
 
@@ -49,23 +49,27 @@ h2 {
   text-transform: capitalize;
 }
 
-.humidity,
 .forecast,
-.units,
 .row,
 .weekly-forecast-title,
-.wind,
 #wind-speed {
   color: white;
 }
 
+.wind {
+  font-weight: bold;
+}
 .wind-section {
-  margin-right: 70px;
   margin-left: 45px;
+  margin-right: 70px;
+  text-align: center;
 }
 
 .humidity {
-  display: inline-block;
+  font-weight: bold;
+}
+.humidity-section {
+  text-align: center;
 }
 
 .units {
@@ -100,25 +104,25 @@ h2 {
 }
 
 .submit-button {
+  margin-bottom: 13px;
   margin-left: 15px;
   margin-top: -17px;
-  margin-bottom: 13px;
 }
 .current-button {
+  margin-bottom: 12px;
   margin-left: 10px;
   margin-top: -17px;
-  margin-bottom: 12px;
 }
 
 .col-1 {
-  text-align: center;
   flex: auto;
+  text-align: center;
 }
 
 .form-control {
+  bottom: -95px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   left: -285px;
-  bottom: -95px;
   margin-top: -15px;
 }
 
@@ -132,34 +136,37 @@ form {
 
 .open-source {
   color: white;
-  text-align: center;
   padding: 15px;
+  text-align: center;
+}
+.source-link {
+  color: greenyellow;
 }
 
 .pusheen-gif {
-  width: 100%;
+  margin-bottom: 65px;
   margin-left: 1070px;
   margin-top: -200px;
-  margin-bottom: 65px;
   position: fixed;
+  width: 100%;
 }
 
 .container.border.border-4 {
-  margin-top: 20px;
-  padding: 40px;
-  border-radius: 50px;
-  max-width: 640px;
-  height: 470px;
   border-color: white !important;
+  border-radius: 50px;
+  height: 470px;
+  margin-top: 20px;
+  max-width: 640px;
+  padding: 40px;
 }
 
 .current-temp {
+  align-items: center;
   border: 3px solid white;
   border-radius: 15px;
-  padding: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 15px;
 }
 
 body {
